@@ -15,13 +15,15 @@
             type="video/mp4"-->
 	</a-assets>
     <!-- create your content here. just a box for now -->
-    <a-box position='0 0 0' material="src: #vdo"></a-box>
+
     <!--video src="#vdo" width="16" height="9" position="0 0 -20" autoplay="true" loop="true"></a-video-->
      <!-- define a camera which will move according to the marker position -->
-<a-entity obj-model="obj: #obj1" material="src: #face" position="0 0 0" rotation="0 0 0" scale="0.01 0.01 0.01" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-entity>
-    
-	  <a-marker-camera type='pattern' url='https://nyzhnykai.github.io/testar/pattern-freedom.patt'></a-marker-camera>
-<!--a-marker-camera preset='hiro'></a-marker-camera -->
+<a-marker preset='custom' url='https://nyzhnykai.github.io/testar/pattern-freedom.patt'>
+	<a-entity obj-model="obj: #obj1" material="src: #face" position="0 0 0" rotation="0 0 0" scale="0.01 0.01 0.01" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-entity>
+    <!--a-box position='0 0 0' material="src: #vdo"></a-box-->
+	  </a-marker> <!-- add a simple camera --> 
+<a-entity camera></a-entity> </a-scene>
+
   </a-scene>
 <!--script>
       var scene = document.querySelector("a-scene");
