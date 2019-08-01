@@ -45,7 +45,8 @@
 				document.getElementById("cubeObj"),
 				document.getElementById("gifObj"),
 				document.getElementById("legoObj")]
-		for (var i = 1; i < 4; i++)
+		const len = 4;
+		for (var i = 1; i < len; i++)
 			elements[i].setAttribute("visible","false");
 		var idx = 0;
 		document.querySelector("button").addEventListener("click", (e)=> {
